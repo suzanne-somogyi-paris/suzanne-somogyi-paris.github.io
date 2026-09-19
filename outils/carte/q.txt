@@ -1,0 +1,12 @@
+[out:json][timeout:60];
+(
+ way["highway"](around:750,48.8873797,2.3472719);
+ way["leisure"~"park|garden"](around:750,48.8873797,2.3472719);
+ relation["leisure"~"park|garden"](around:750,48.8873797,2.3472719);
+ way["building"~"church|cathedral|basilica"](around:750,48.8873797,2.3472719);
+ way["amenity"="place_of_worship"](around:750,48.8873797,2.3472719);
+ relation["amenity"="place_of_worship"](around:750,48.8873797,2.3472719);
+ node["railway"="station"]["station"="subway"](around:900,48.8873797,2.3472719);
+ node["railway"="subway_entrance"](around:750,48.8873797,2.3472719);
+);
+out body geom;
