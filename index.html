@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
 <link rel="apple-touch-icon" href="favicon-180.png">
-<link rel="stylesheet" href="style.css?v=20260919j">
+<link rel="stylesheet" href="style.css?v=20260919k">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ExhibitionEvent","name":"Suzanne Somogyi, une mémoire du bijou contemporain français",
 "description":"Exposition de bijou contemporain, Parcours Bijoux Paris 2026.",
@@ -36,11 +36,11 @@
 
 <header class="bar">
  <a class="bar__b" href="#top">Suzanne Somogyi</a>
- <nav class="bar__n"><a href="#pieces">Pièces</a><a href="#galerie">La galerie</a></nav>
+ <nav class="bar__n"><a href="#pieces">Pièces</a><a href="#carnet">Carnet</a><a href="#galerie">La galerie</a></nav>
 </header>
 <div class="fil" aria-hidden="true">
  <a class="fil__b" href="#top">S. Somogyi</a>
- <nav class="fil__n"><a href="#pieces">Pièces</a><a href="#galerie">La galerie</a></nav>
+ <nav class="fil__n"><a href="#pieces">Pièces</a><a href="#carnet">Carnet</a><a href="#galerie">La galerie</a></nav>
 </div>
 
 <main>
@@ -75,7 +75,7 @@
 <section id="exposition" class="ancre">
  <div class="split">
   <div><span class="lbl">L’exposition</span></div>
-  <div class="prose"><p>Cette exposition est une initiative d’Amira Sliman et du mari de Suzanne Somogyi, qui vit dans le 18e arrondissement de Paris.</p><p>Le projet est de garder vivante la mémoire de Suzanne, et de célébrer son savoir-faire, son sens artistique et son style.</p><p>Elle a fait ses plus belles pièces en affirmant ce style, pleinement, dans tout ce qu’elle réalisait.</p></div>
+  <div class="prose"><p>Ce projet d’exposition est né d’une rencontre marquante avec Monique et Jean Laurette, couple de créateurs de bijoux. Installés à Paris à leurs débuts, ils croisent la route de Courrèges, exposent aux côtés de Jean Vendome ou encore de Dinh Van. Au fil de nos échanges, ils me racontent leur parcours, leurs collaborations. Ils me racontent une partie de l’histoire du bijou contemporain français, passionnante et méconnue.</p><p>Parmi les figures de cette scène, Suzanne Somogyi occupe une place singulière. Elle développe un style audacieux et reconnaissable, expérimente des matériaux novateurs pour l’époque tels que l’aluminium ou le plexiglas.</p><p>J’ai rencontré Suzanne lors d’une exposition commune quelques mois avant sa disparition à l’âge de 49 ans. Son énergie créative m’a profondément marquée. Elle laisse une œuvre riche, puissante, pourtant largement ignorée.</p><p>À travers cette exposition, je souhaite rendre hommage à Suzanne Somogyi et, plus largement, interroger le devenir de ces créateurs et de leurs œuvres. Que reste-t-il de ces pionniers du bijou contemporain en France, lorsque la médiatisation fait défaut ?</p><p>Avec l’aide de son mari, j’ai sélectionné une centaine de pièces, représentatives de son univers artistique et mémoire de son époque. Cette exposition se veut à la fois un hommage, une redécouverte, et une reconnaissance nécessaire à une artiste majeure du bijou contemporain français.</p><p class="credit" style="margin-top:16px">Amira Sliman</p></div>
  </div>
  <div class="rule"></div>
 </section>
@@ -178,6 +178,14 @@
   </figure>
  </div>
  </div>
+</section>
+
+<section class="artiste" id="carnet">
+ <div class="artiste__h"><h2>Carnet</h2><span>Recherches</span></div>
+ <figure class="carnet">
+  <a href="images/carnet/carnet_01.jpg" target="_blank" rel="noopener"><img src="images/carnet/carnet_01_m.jpg" width="1500" height="1215" alt="Double page d’un carnet de Suzanne Somogyi : croquis de bagues" loading="lazy" decoding="async"></a>
+  <figcaption><p>Double page d’un carnet de Suzanne Somogyi. Recherches de bagues au stylo rouge et noir, dessins découpés et collés, notes manuscrites.</p></figcaption>
+ </figure>
 </section>
 
 <section id="galerie" class="ancre lieu">
@@ -364,7 +372,7 @@ function defile(){
 addEventListener('scroll',defile,{passive:true}); defile();
 
 /* apparitions au defilement */
-const rv=[...document.querySelectorAll('.split,.affiche figure,.artiste__h,.piece__im,.lieu__plan,.lieu__c,.foot')];
+const rv=[...document.querySelectorAll('.split,.affiche figure,.artiste__h,.piece__im,.carnet,.lieu__plan,.lieu__c,.foot')];
 rv.forEach(e=>e.classList.add('rv'));
 const ro=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}

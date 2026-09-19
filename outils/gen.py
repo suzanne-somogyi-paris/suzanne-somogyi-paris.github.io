@@ -10,10 +10,12 @@ GALERIE='Galerie Amira Sliman Jewellery'
 CARTE='https://www.google.com/maps/search/?api=1&amp;query=Galerie+Amira+Sliman%2C+9+rue+Ramey%2C+75018+Paris'
 IG_GALERIE='galerieamiraslimanjewellery'
 
-# EXPO : texte ecrit d apres les indications de Raouf (19-09). BIO : page officielle Parcours Bijoux 2026 (contenu/00_exposition_et_biographie.txt)
-EXPO=["Cette exposition est une initiative d’Amira Sliman et du mari de Suzanne Somogyi, qui vit dans le 18e arrondissement de Paris.",
- "Le projet est de garder vivante la mémoire de Suzanne, et de célébrer son savoir-faire, son sens artistique et son style.",
- "Elle a fait ses plus belles pièces en affirmant ce style, pleinement, dans tout ce qu’elle réalisait."]
+# EXPO : texte du projet PB26 d Amira Sliman (contenu/02_le_projet_PB26.txt), nom ecrit Somogyi comme sur l affiche. BIO : page officielle Parcours Bijoux 2026 (contenu/00_exposition_et_biographie.txt)
+EXPO=["Ce projet d’exposition est né d’une rencontre marquante avec Monique et Jean Laurette, couple de créateurs de bijoux. Installés à Paris à leurs débuts, ils croisent la route de Courrèges, exposent aux côtés de Jean Vendome ou encore de Dinh Van. Au fil de nos échanges, ils me racontent leur parcours, leurs collaborations. Ils me racontent une partie de l’histoire du bijou contemporain français, passionnante et méconnue.",
+ "Parmi les figures de cette scène, Suzanne Somogyi occupe une place singulière. Elle développe un style audacieux et reconnaissable, expérimente des matériaux novateurs pour l’époque tels que l’aluminium ou le plexiglas.",
+ "J’ai rencontré Suzanne lors d’une exposition commune quelques mois avant sa disparition à l’âge de 49 ans. Son énergie créative m’a profondément marquée. Elle laisse une œuvre riche, puissante, pourtant largement ignorée.",
+ "À travers cette exposition, je souhaite rendre hommage à Suzanne Somogyi et, plus largement, interroger le devenir de ces créateurs et de leurs œuvres. Que reste-t-il de ces pionniers du bijou contemporain en France, lorsque la médiatisation fait défaut ?",
+ "Avec l’aide de son mari, j’ai sélectionné une centaine de pièces, représentatives de son univers artistique et mémoire de son époque. Cette exposition se veut à la fois un hommage, une redécouverte, et une reconnaissance nécessaire à une artiste majeure du bijou contemporain français."]
 BIO=["Née le 2 novembre 1950 en Hongrie, elle se forme artistiquement en section bijoux au secondaire puis, durant cinq années, à l’École Supérieure d’Art.",
  "Arrivée à Paris en 1976, elle participe à des expositions collectives. En 1979, première exposition personnelle, Galerie Monade. Elle choisit de ne réaliser que des pièces uniques, explore et associe les matériaux : plexiglas, aluminium, émaux, galets taillés, associés dans des bijoux aux formes très géométriques et très pures."]
 
@@ -26,7 +28,7 @@ def typo(s):
 FL='<svg class="fl" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.6 9.4 9.4 2.6M4.3 2.6h5.1v5.1"/></svg>'
 IGSVG='<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.4"/><circle cx="12" cy="12" r="4.6"/><circle class="d" cx="17.6" cy="6.4" r="1.15"/></svg>'
 
-LIENS=[('pieces','Pièces'),('galerie','La galerie')]
+LIENS=[('pieces','Pièces'),('carnet','Carnet'),('galerie','La galerie')]
 nav=''.join('<a href="#%s">%s</a>'%l for l in LIENS)
 
 # echelle commune : ECHELLE_CM centimetres reels = toute la largeur de la page ; chaque piece garde sa taille relative
@@ -48,7 +50,7 @@ for i,o in enumerate(OE,1):
   </figure>'''.format(pc=o['cadre_cm']/ECHELLE_CM*100,i=i,n=n,plein=o['plein'],bg=o['bg'],titre=o['titre'],m=o['matiere'],nom=NOM,
                       file=o['file'],w=o['w'],h=o['h'],mat=mat,fl=FL))
 
-expo=''.join('<p>%s</p>'%p for p in EXPO)
+expo=''.join('<p>%s</p>'%p for p in EXPO)+'<p class="credit" style="margin-top:16px">Amira Sliman</p>'
 bio=''.join('<p>%s</p>'%p for p in BIO)
 
 DESC=NOM+'. '+SOUS+'. '+GALERIE+', 9 rue Ramey, 75018 Paris. '+DATES+'. Vernissage le 17 octobre à partir de 18h. Parcours Bijoux Paris 2026.'
@@ -86,7 +88,7 @@ HEAD='''<!doctype html>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
 <link rel="apple-touch-icon" href="favicon-180.png">
-<link rel="stylesheet" href="style.css?v=20260919j">
+<link rel="stylesheet" href="style.css?v=20260919k">
 {jsonld}
 </head>
 <body>
@@ -169,6 +171,14 @@ BODY='''
  </div>
 </section>
 
+<section class="artiste" id="carnet">
+ <div class="artiste__h"><h2>Carnet</h2><span>Recherches</span></div>
+ <figure class="carnet">
+  <a href="images/carnet/carnet_01.jpg" target="_blank" rel="noopener"><img src="images/carnet/carnet_01_m.jpg" width="1500" height="1215" alt="Double page d’un carnet de Suzanne Somogyi : croquis de bagues" loading="lazy" decoding="async"></a>
+  <figcaption><p>Double page d’un carnet de Suzanne Somogyi. Recherches de bagues au stylo rouge et noir, dessins découpés et collés, notes manuscrites.</p></figcaption>
+ </figure>
+</section>
+
 <section id="galerie" class="ancre lieu">
  <div class="rule"></div>
  <div class="lieu__h"><span class="lbl">La galerie</span></div>
@@ -230,7 +240,7 @@ function defile(){
 addEventListener('scroll',defile,{passive:true}); defile();
 
 /* apparitions au defilement */
-const rv=[...document.querySelectorAll('.split,.affiche figure,.artiste__h,.piece__im,.lieu__plan,.lieu__c,.foot')];
+const rv=[...document.querySelectorAll('.split,.affiche figure,.artiste__h,.piece__im,.carnet,.lieu__plan,.lieu__c,.foot')];
 rv.forEach(e=>e.classList.add('rv'));
 const ro=new IntersectionObserver(es=>es.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}
