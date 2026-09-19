@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suzanne Somogyi//Parcours Bijoux Paris 2026//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:vernissage-suzanne-somogyi-2026@galerie-amira-sliman
+DTSTAMP:20260919T100000Z
+DTSTART:20261017T160000Z
+DTEND:20261017T183000Z
+SUMMARY:Vernissage, Suzanne Somogyi
+LOCATION:Galerie Amira Sliman Jewellery\, 9 rue Ramey\, 75018 Paris
+DESCRIPTION:Suzanne Somogyi\, une mémoire du bijou contemporain français. Parcours Bijoux Paris 2026. Exposition du 15 au 24 octobre 2026.
+END:VEVENT
+END:VCALENDAR

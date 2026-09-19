@@ -1,0 +1,17 @@
+SITE SUZANNE SOMOGYI, one-pager
+-------------------------------
+index.html            la page (ouvrir en double-cliquant)
+style.css             tout le style
+fonts/                Akzidenz-Grotesk light / roman / bold
+images/affiche        l'affiche officielle
+images/oeuvres        les 20 pièces, images entières, version pleine + version _m pour la grille
+images/logo           le logo de la Galerie Amira Sliman, noir sur transparent
+images/carte          le plan du quartier, version large et version téléphone
+agenda/               vernissage.ics (Ajouter à l'agenda)
+contenu/              les textes bruts, mot pour mot
+outils/assets.py      refabrique les images depuis ~/Downloads/RETOUCHES_FINALS_4SEP
+outils/carte.py      redessine le plan du quartier (images/carte/) depuis outils/carte/osm.json
+outils/gen.py         réécrit index.html (textes, pièces, visionneuse)
+
+Pour mettre en ligne : le dossier est autonome, il suffit de le déposer
+tel quel (GitHub Pages, OVH, Netlify). Aucun serveur nécessaire.
