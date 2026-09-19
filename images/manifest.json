@@ -1,204 +1,88 @@
 {
  "oeuvres": [
   {
-   "titre": "LAPIS RING",
+   "titre": "MOSAIC DISC",
    "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_01_lapis_ring.jpg",
+   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_14_mosaic_disc.jpg",
+   "cm": 9.6,
+   "cadre_cm": 12.69,
    "plein": "images/oeuvres/suzanne-somogyi_01.jpg",
    "file": "images/oeuvres/suzanne-somogyi_01_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#eeeeee"
-  },
-  {
-   "titre": "CREAM STONE RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_02_cream_stone_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_02.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_02_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#efefee"
-  },
-  {
-   "titre": "VIOLET GLASS RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_03_violet_glass_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_03.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_03_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#fcfcfa"
-  },
-  {
-   "titre": "AGATE RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_04_agate_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_04.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_04_m.jpg",
-   "w": 821,
-   "h": 1100,
-   "bg": "#fdfdfb"
-  },
-  {
-   "titre": "YELLOW STONE RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_05_yellow_stone_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_05.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_05_m.jpg",
-   "w": 821,
-   "h": 1100,
-   "bg": "#f0f0f0"
-  },
-  {
-   "titre": "LAYERED CUFF",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_06_layered_cuff.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_06.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_06_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#f1f1f1"
-  },
-  {
-   "titre": "SILVER CRESCENT CHOKER",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_07_silver_crescent_choker.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_07.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_07_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#fdfefd"
+   "w": 1391,
+   "h": 1400,
+   "bg": "#ffffff"
   },
   {
    "titre": "DISC WELL RING",
    "matiere": "",
    "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_08_disc_well_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_08.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_08_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#f7f7f6"
-  },
-  {
-   "titre": "LOZENGE CHOKER",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_09_lozenge_choker.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_09.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_09_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#fefefe"
-  },
-  {
-   "titre": "BLUE GLASS RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_10_blue_glass_ring_v7.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_10.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_10_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#f5f5f3"
-  },
-  {
-   "titre": "AMBER RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_11_amber_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_11.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_11_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#f7f8f7"
-  },
-  {
-   "titre": "BLACK STEPPED RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_12_black_stepped_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_12.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_12_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#f3f3f1"
-  },
-  {
-   "titre": "BLACK DOME RING",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_13_black_dome_ring_v3.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_13.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_13_m.jpg",
-   "w": 821,
-   "h": 1100,
-   "bg": "#efefef"
-  },
-  {
-   "titre": "MOSAIC DISC",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_14_mosaic_disc.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_14.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_14_m.jpg",
-   "w": 1100,
-   "h": 821,
+   "cm": 5.85,
+   "cadre_cm": 7.72,
+   "plein": "images/oeuvres/suzanne-somogyi_02.jpg",
+   "file": "images/oeuvres/suzanne-somogyi_02_m.jpg",
+   "w": 1345,
+   "h": 1258,
    "bg": "#ffffff"
   },
   {
-   "titre": "SPRIG BROOCH",
+   "titre": "SILVER CRESCENT CHOKER",
    "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_15_sprig_brooch.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_15.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_15_m.jpg",
-   "w": 1100,
-   "h": 821,
-   "bg": "#f7f7f7"
-  },
-  {
-   "titre": "VIOLET PLEXI BRACELET",
-   "matiere": "Plexi violet.",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_16_violet_plexi_bracelet.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_16.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_16_m.jpg",
-   "w": 1100,
-   "h": 733,
-   "bg": "#f4f4f4"
-  },
-  {
-   "titre": "LOZENGE BROOCH",
-   "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_17_lozenge_brooch.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_17.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_17_m.jpg",
-   "w": 1100,
-   "h": 733,
-   "bg": "#dedee1"
+   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_07_silver_crescent_choker.jpg",
+   "cm": 10.9,
+   "cadre_cm": 14.38,
+   "plein": "images/oeuvres/suzanne-somogyi_03.jpg",
+   "file": "images/oeuvres/suzanne-somogyi_03_m.jpg",
+   "w": 1400,
+   "h": 1129,
+   "bg": "#ffffff"
   },
   {
    "titre": "RED ENAMEL RING",
    "matiere": "",
    "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_18_red_enamel_ring.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_18.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_18_m.jpg",
-   "w": 1100,
-   "h": 733,
-   "bg": "#f4f4f4"
+   "cm": 5.6,
+   "cadre_cm": 7.46,
+   "plein": "images/oeuvres/suzanne-somogyi_04.jpg",
+   "file": "images/oeuvres/suzanne-somogyi_04_m.jpg",
+   "w": 659,
+   "h": 702,
+   "bg": "#ffffff"
   },
   {
-   "titre": "SPRIG PENDANT CHOKER",
+   "titre": "LOZENGE CHOKER",
    "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_19_sprig_pendant_choker.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_19.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_19_m.jpg",
-   "w": 1100,
-   "h": 733,
-   "bg": "#f6f7f6"
+   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_09_lozenge_choker.jpg",
+   "cm": 14,
+   "cadre_cm": 18.48,
+   "plein": "images/oeuvres/suzanne-somogyi_05.jpg",
+   "file": "images/oeuvres/suzanne-somogyi_05_m.jpg",
+   "w": 1400,
+   "h": 1211,
+   "bg": "#ffffff"
   },
   {
-   "titre": "BAR CHOKER",
+   "titre": "BLUE GLASS RING",
    "matiere": "",
-   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_20_bar_choker.jpg",
-   "plein": "images/oeuvres/suzanne-somogyi_20.jpg",
-   "file": "images/oeuvres/suzanne-somogyi_20_m.jpg",
-   "w": 1100,
-   "h": 733,
-   "bg": "#ededec"
+   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_10_blue_glass_ring_v7.jpg",
+   "cm": 6.5,
+   "cadre_cm": 8.57,
+   "plein": "images/oeuvres/suzanne-somogyi_06.jpg",
+   "file": "images/oeuvres/suzanne-somogyi_06_m.jpg",
+   "w": 1324,
+   "h": 1197,
+   "bg": "#ffffff"
+  },
+  {
+   "titre": "LOZENGE BROOCH",
+   "matiere": "",
+   "src": "~/Downloads/RETOUCHES_FINALS_4SEP/FINAL_17_lozenge_brooch.jpg",
+   "cm": 8,
+   "cadre_cm": 10.55,
+   "plein": "images/oeuvres/suzanne-somogyi_07.jpg",
+   "file": "images/oeuvres/suzanne-somogyi_07_m.jpg",
+   "w": 1289,
+   "h": 802,
+   "bg": "#ffffff"
   }
  ]
 }

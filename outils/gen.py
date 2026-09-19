@@ -10,12 +10,10 @@ GALERIE='Galerie Amira Sliman Jewellery'
 CARTE='https://www.google.com/maps/search/?api=1&amp;query=Galerie+Amira+Sliman%2C+9+rue+Ramey%2C+75018+Paris'
 IG_GALERIE='galerieamiraslimanjewellery'
 
-# textes officiels de la page Parcours Bijoux 2026 (contenu/00_exposition_et_biographie.txt) ; seules l accentuation et les capitales sont corrigees
-EXPO=["Ce projet d’exposition est né d’une rencontre marquante avec Monique et Jean Laurette, couple de créateurs de bijoux. Installés à Paris à leurs débuts, ils croisent la route de Courrèges, exposent aux côtés de Jean Vendome ou de Dinh Van. Au fil de nos échanges, ils me racontent une partie de l’histoire du bijou contemporain français, passionnante et méconnue.",
- "Parmi les figures de cette scène, Suzanne Somogyi occupe une place singulière. Elle développe un style audacieux et reconnaissable, expérimente des matériaux novateurs…",
- "J’ai rencontré Suzanne lors d’une exposition commune quelques mois avant sa disparition à l’âge de 49 ans. Son énergie créative m’a profondément marquée. Elle laisse une œuvre riche, puissante, pourtant largement ignorée.",
- "À travers cette exposition, je souhaite lui rendre hommage et, plus largement, interroger le devenir de ces créateurs et de leurs œuvres.",
- "Que reste-t-il de ces pionniers du bijou contemporain en France, lorsque la médiatisation fait défaut ?"]
+# EXPO : texte ecrit d apres les indications de Raouf (19-09). BIO : page officielle Parcours Bijoux 2026 (contenu/00_exposition_et_biographie.txt)
+EXPO=["Cette exposition est une initiative d’Amira Sliman et du mari de Suzanne Somogyi, qui vit dans le 18e arrondissement de Paris.",
+ "Le projet est de garder vivante la mémoire de Suzanne, et de célébrer son savoir-faire, son sens artistique et son style.",
+ "Elle a fait ses plus belles pièces en affirmant ce style, pleinement, dans tout ce qu’elle réalisait."]
 BIO=["Née le 2 novembre 1950 en Hongrie, elle se forme artistiquement en section bijoux au secondaire puis, durant cinq années, à l’École Supérieure d’Art.",
  "Arrivée à Paris en 1976, elle participe à des expositions collectives. En 1979, première exposition personnelle, Galerie Monade. Elle choisit de ne réaliser que des pièces uniques, explore et associe les matériaux : plexiglas, aluminium, émaux, galets taillés, associés dans des bijoux aux formes très géométriques et très pures."]
 
@@ -31,12 +29,15 @@ IGSVG='<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.4" y="2.4" width="
 LIENS=[('pieces','Pièces'),('galerie','La galerie')]
 nav=''.join('<a href="#%s">%s</a>'%l for l in LIENS)
 
+# echelle commune : ECHELLE_CM centimetres reels = toute la largeur de la page ; chaque piece garde sa taille relative
+ECHELLE_CM=30.0
+RANGS=[[0,1],[3,2],[4,5],[6]]      # une grande piece et une petite par rang, posees sur la meme ligne
 n=len(OE)
 figs=[]
 for i,o in enumerate(OE,1):
     mat='<p>%s</p>'%o['matiere'] if o['matiere'] else ''
     figs.append('''
-  <figure class="piece__im" role="button" tabindex="0" aria-label="Voir la pièce {i:02d} en grand"
+  <figure class="piece__im" style="--w:{pc:.1f}%" role="button" tabindex="0" aria-label="Voir la pièce {i:02d} en grand"
           data-full="{plein}" data-bg="{bg}" data-titre="{titre}" data-mat="{m}" data-cred="" data-nom="{nom}">
    <img src="{file}" width="{w}" height="{h}" alt="{titre}, {nom}" loading="lazy" decoding="async">
    <figcaption>
@@ -44,10 +45,10 @@ for i,o in enumerate(OE,1):
     {mat}
     <span class="zoom">Voir en grand {fl}</span>
    </figcaption>
-  </figure>'''.format(i=i,n=n,plein=o['plein'],bg=o['bg'],titre=o['titre'],m=o['matiere'],nom=NOM,
+  </figure>'''.format(pc=o['cadre_cm']/ECHELLE_CM*100,i=i,n=n,plein=o['plein'],bg=o['bg'],titre=o['titre'],m=o['matiere'],nom=NOM,
                       file=o['file'],w=o['w'],h=o['h'],mat=mat,fl=FL))
 
-expo=''.join('<p>%s</p>'%p for p in EXPO)+'<p class="credit" style="margin-top:16px">Amira Sliman</p>'
+expo=''.join('<p>%s</p>'%p for p in EXPO)
 bio=''.join('<p>%s</p>'%p for p in BIO)
 
 DESC=NOM+'. '+SOUS+'. '+GALERIE+', 9 rue Ramey, 75018 Paris. '+DATES+'. Vernissage le 17 octobre à partir de 18h. Parcours Bijoux Paris 2026.'
@@ -65,7 +66,7 @@ JSONLD='''<script type="application/ld+json">
  {"@type":"Event","name":"Vernissage, Suzanne Somogyi","startDate":"2026-10-17T18:00:00+02:00","location":{"@type":"Place","name":"Galerie Amira Sliman Jewellery","address":"9 rue Ramey, 75018 Paris"}}]}
 </script>'''
 
-SITE='https://suzanne-somogyi.github.io/'   # adresse GitHub Pages
+SITE='https://raouf-png.github.io/suzanne-somogyi/'   # adresse GitHub Pages
 HEAD='''<!doctype html>
 <html lang="fr">
 <head>
@@ -82,7 +83,10 @@ HEAD='''<!doctype html>
 <meta property="og:image" content="{site}images/affiche/affiche_suzanne_somogyi.jpg">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1350">
-<link rel="stylesheet" href="style.css?v=20260919e">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="stylesheet" href="style.css?v=20260919j">
 {jsonld}
 </head>
 <body>
@@ -194,6 +198,8 @@ BODY='''
  </div>
 </div>
 
+<div class="editbar"><span>Mode texte</span><button type="button" id="edCopie">Copier les textes</button><button type="button" id="edRaz">Tout remettre</button><span>Cmd A pour quitter</span></div>
+
 <footer>
  <div class="foot">
   <div><span class="lbl">Exposition</span><p>{nom}<br>{dates}<br>{galerie}</p></div>
@@ -254,7 +260,7 @@ function ouvrir(f){
 function fermer(){ vue.hidden=true; vueIm.removeAttribute('src'); document.body.style.overflow='';
   if(lastFocus) lastFocus.focus(); }
 pieces.forEach(f=>{
-  f.addEventListener('click',()=>ouvrir(f));
+  f.addEventListener('click',()=>{ if(!document.documentElement.classList.contains('edit')) ouvrir(f); });
   f.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();ouvrir(f);} });
 });
 vue.addEventListener('click',e=>{ if(!e.target.closest('.vue__c')) fermer(); });
@@ -272,6 +278,26 @@ vue.addEventListener('touchend',e=>{
   if(tx===null) return; const dx=e.changedTouches[0].clientX-tx; tx=null;
   if(Math.abs(dx)>56){ montrer(dx<0?cur+1:cur-1); }
 },{passive:true});
+
+/* mode texte : Cmd A rend les textes modifiables, les changements restent dans ce navigateur (localStorage) */
+const TXT='main h1,main h2,main h3,main p,main .lbl,main em,.foot p,.foot .lbl';
+const cles=()=>[...document.querySelectorAll(TXT)].filter(e=>!e.closest('svg')&&!e.querySelector('p,h1,h2,h3,em,img'));
+let mem={}; try{mem=JSON.parse(localStorage.getItem('textes-somogyi')||'{}')}catch(e){}
+cles().forEach((e,i)=>{ if(mem[i]!=null) e.innerHTML=mem[i]; });
+function modeTexte(on){
+  document.documentElement.classList.toggle('edit',on);
+  cles().forEach((e,i)=>{ on?e.setAttribute('contenteditable','true'):e.removeAttribute('contenteditable');
+    e.oninput=on?()=>{mem[i]=e.innerHTML;localStorage.setItem('textes-somogyi',JSON.stringify(mem));}:null; });
+}
+addEventListener('keydown',e=>{
+  if((e.metaKey||e.ctrlKey)&&!e.shiftKey&&e.key.toLowerCase()==='a'&&vue.hidden){
+    e.preventDefault(); modeTexte(!document.documentElement.classList.contains('edit')); }
+});
+document.addEventListener('click',e=>{ if(document.documentElement.classList.contains('edit')&&e.target.closest('main a')) e.preventDefault(); },true);
+document.getElementById('edCopie').addEventListener('click',()=>{
+  const out=cles().map((e,i)=>mem[i]!=null?e.innerText.trim():null).filter(Boolean).join('\\n\\n');
+  navigator.clipboard.writeText(out||'Aucun texte modifié.'); });
+document.getElementById('edRaz').addEventListener('click',()=>{ localStorage.removeItem('textes-somogyi'); location.reload(); });
 
 /* rubrique active dans la barre et dans le fil */
 const links=[...document.querySelectorAll('.bar__n a')],fils=[...document.querySelectorAll('.fil__n a')];
@@ -296,7 +322,7 @@ secs.forEach(s=>s&&io.observe(s));
 head=HEAD.replace('{jsonld}',JSONLD).replace('{nav}',nav).replace('{desc}',DESC).replace('{site}',SITE)
 body=BODY
 PLAN=open(S+'images/carte/plan_large.svg').read()+open(S+'images/carte/plan_tel.svg').read()
-for k,v in dict(bio=bio,sous=SOUS,dates=DATES,galerie=GALERIE,carte=CARTE,fl=FL,expo=expo,figs=''.join(figs),
+for k,v in dict(bio=bio,sous=SOUS,dates=DATES,galerie=GALERIE,carte=CARTE,fl=FL,expo=expo,figs=''.join('\n <div class="rang">'+''.join(figs[i] for i in r)+'\n </div>' for r in RANGS),
                 igg=IG_GALERIE,igsvg=IGSVG,nom=NOM).items():
     body=body.replace('{%s}'%k,v)
 body=body.replace('{n:02d}','%02d'%n)

@@ -2,6 +2,7 @@
 @font-face{font-family:AG;src:url(fonts/Akzidenz-grotesk-roman.ttf) format('truetype');font-weight:400;font-display:swap}
 @font-face{font-family:AG;src:url(fonts/Akzidenz-grotesk-bold.ttf) format('truetype');font-weight:700;font-display:swap}
 @font-face{font-family:AG;src:url(fonts/Akzidenz-grotesk-black.ttf) format('truetype');font-weight:900;font-display:swap}
+@font-face{font-family:PF;src:url(fonts/PlayfairDisplay.ttf) format('truetype');font-weight:400 900;font-display:swap}
 @font-face{font-family:BM;src:url(fonts/BodoniModa.ttf) format('truetype');font-weight:400 900;font-display:swap}
 
 :root{
@@ -139,15 +140,39 @@ section{padding:0 var(--m)}
 
 /* ---------- le nom de Suzanne Somogyi : didone, pleins et delies ---------- */
 .hero h1,.bar__b,.fil__b{font-family:BM,"Bodoni 72",Didot,serif;font-weight:400;font-optical-sizing:none;font-variation-settings:'opsz' 30}
-.hero h1{letter-spacing:-.03em;line-height:.9;font-size:clamp(54px,15.5vw,240px);padding-bottom:.14em}
+.hero h1{letter-spacing:-.03em;line-height:.9;font-size:clamp(54px,15.5vw,240px);padding-bottom:.3em}
 .bar__b{font-size:clamp(17px,1.5vw,23px);letter-spacing:-.01em}
 
-/* ---------- galerie de pieces (solo) ---------- */
-.galerie{columns:1;column-gap:clamp(24px,3vw,54px);margin-top:clamp(30px,4.5vh,58px)}
-.galerie .piece__im{display:block;break-inside:avoid;margin-bottom:clamp(36px,5vh,68px)}
+/* sous-titre : une ligne, serif proche du nom sans etre la meme */
+.hero__sub{max-width:none;font-size:clamp(21px,2.5vw,40px);line-height:1.2}
+.hero__sub em{font-family:PF,Didot,"Bodoni 72",serif;font-weight:400;letter-spacing:-.005em}
+@media(min-width:621px){.hero__sub{white-space:nowrap}}
+@media(max-width:620px){.hero__sub{font-size:23px}}
+
+/* infos pratiques : en roman, 3 px de plus */
+.meta div p{font-weight:400;font-size:calc(clamp(14px,1.05vw,17px) + 3px)}
+@media(max-width:620px){.meta div p{font-size:19px}}
+
+/* ---------- galerie de pieces (solo) : toutes les pieces a la meme echelle, posees par rangs sur une ligne commune ---------- */
+.galerie{margin-top:clamp(10px,2vh,30px)}
+.rang{display:flex;justify-content:center;align-items:flex-end;gap:6%;margin-top:clamp(64px,11vh,150px)}
+.rang .piece__im{display:block;flex:none;width:var(--w)}
 .galerie .piece__im img{width:100%;max-height:none}
-@media(min-width:620px){.galerie{columns:2}}
-@media(min-width:1100px){.galerie{columns:3}}
+.galerie .piece__im figcaption{margin-top:10px}
+@media(max-width:759px){
+  .rang{flex-direction:column;align-items:center;gap:48px;margin-top:56px}
+  .rang .piece__im{width:min(100%,max(46%,calc(var(--w)*1.7)))}
+}
+
+/* ---------- mode texte (Cmd A) ---------- */
+.edit [contenteditable]{outline:1px dashed #c9c9c9;outline-offset:3px;cursor:text}
+.edit [contenteditable]:focus{outline:1px solid var(--ink)}
+.edit .piece__im{cursor:default}
+.editbar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:200;display:none;gap:14px;align-items:center;
+  background:#fff;border:1px solid var(--ink);padding:9px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.edit .editbar{display:flex}
+.editbar button{border-bottom:1px solid var(--ink);padding-bottom:1px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+
 .ancre{scroll-margin-top:60px}
 
 /* ---------- la galerie : plan du quartier, puis le bloc adresse centre ---------- */
